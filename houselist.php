@@ -93,9 +93,6 @@
  
   </li>
   </ul>
-  <div class="row">
-  
-</div>
 
 <?php
  require_once("conn.php");
@@ -104,7 +101,8 @@
   $query=mysql_query($SQL);
   while($row=mysql_fetch_array($query)){
 ?>
-<div class="col-sm-6 col-md-4"> <img src="<?php echo $row['imageurl'];?>" alt="..." width=100%>
+<div class="right">
+<div class="col-sm-6 col-md-4"> <img onload="javascript:DrawImage(this,300,200)" src="<?php echo $row['imageurl'];?>" alt="..." width=100%>
       <div class="caption">
         <h4><?php echo $row['description'];?></h4>
         <ul class="list-inline" >
